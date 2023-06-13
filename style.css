@@ -465,4 +465,95 @@ body .content .registration div .rightie p {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   margin-bottom: 0;
+}
+body .content .committees {
+  margin-top: 80px;
+  background: url("./images/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: translateX(-10px);
+  border-top-left-radius: 200px;
+  box-shadow: 7px 0 0 0 rgba(255, 255, 255, 0.8) inset;
+}
+body .content .committees .to_right {
+  margin-left: 50%;
+  margin-right: 50px;
+  transform: translateY(-30px);
+}
+body .content .committees .to_right p {
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  text-align: justify;
+  font-size: 22px;
+  font-weight: 500;
+}
+body .content .committees .to_right h2::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 1px;
+  background-color: #fff;
+}
+body .content .committees .to_right h4 {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 0;
+  color: #fff;
+}
+body .content .center {
+  margin: 30px 0;
+}
+body .content .center h2 {
+  font-size: 25px;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  color: red;
+  margin-bottom: 0;
+  text-align: center;
+}
+body .content .center .pars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+body .content .center .pars p {
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  text-align: justify;
+  font-size: 22px;
+  font-weight: 500;
+}
+body .content .venue {
+  display: flex;
+  width: 80%;
+  margin: 50px auto;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 2px #fff;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8) inset;
+  border-radius: 20px;
+}
+body .content .venue .left {
+  margin-right: 30px;
+}
+body .content .venue .left h1 {
+  font-size: 25px;
+  color: #D6C48F;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+body .content .venue .left h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 15px;
+  background-color: #D6C48F;
+}
+body .content .venue .left p {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+  text-align: justify;
+  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */

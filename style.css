@@ -1,0 +1,468 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Tillana:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #042037;
+}
+body .wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 90;
+  right: -100%;
+  height: 100%;
+  width: 100%;
+  background: #07355a;
+  transition: all 0.6s ease-in-out;
+}
+body #active:checked ~ .wrapper {
+  right: 0;
+  z-index: 90;
+}
+body .menu-btn {
+  position: absolute;
+  z-index: 100;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+body .menu-btn span,
+body .menu-btn:before,
+body .menu-btn:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 30%;
+  width: 40%;
+  border-bottom: 2px solid #fff;
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+body .menu-btn:before {
+  transform: translateY(-8px);
+}
+body .menu-btn:after {
+  transform: translateY(8px);
+}
+body .close {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: background 0.6s;
+}
+body #active:checked + .menu-btn span {
+  transform: scaleX(0);
+}
+body #active:checked + .menu-btn:before {
+  transform: rotate(45deg);
+  border-color: #fff;
+}
+body #active:checked + .menu-btn:after {
+  transform: rotate(-45deg);
+  border-color: #fff;
+}
+body .wrapper ul {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+body .wrapper ul li {
+  height: 10%;
+  margin: 15px 0;
+}
+body .wrapper ul li a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  border-radius: 50px;
+  position: absolute;
+  line-height: 50px;
+  margin: 5px 30px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+body .wrapper ul li a:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+body .wrapper ul li a:hover:after {
+  transform: scaleY(1);
+}
+body .wrapper ul li a:hover {
+  color: #1a73e8;
+}
+body input[type=checkbox] {
+  display: none;
+}
+body #active:checked ~ .wrapper ul li a {
+  opacity: 1;
+}
+body .wrapper ul li a {
+  transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(100px);
+}
+body #active:checked ~ .wrapper ul li a {
+  transform: none;
+  transition-timing-function: ease, cubic-bezier(0.1, 1.3, 0.3, 1); /* easeOutBackを緩めた感じ */
+  transition-delay: 0.6s;
+  transform: translateX(-100px);
+}
+body .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+body .content .logos {
+  margin: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+}
+body .content h2 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  margin: 5px;
+}
+body .content h1 {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 800;
+  margin: 5px;
+}
+body .content h3 {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 800;
+  margin: 5px;
+  font-family: "Tillana", cursive;
+}
+body .content p {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  margin: 5px;
+  margin-bottom: 0;
+}
+body .content .date {
+  color: rgb(246, 50, 50);
+}
+body .content .description {
+  margin-top: 80px;
+  background: url("./images/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(-10px);
+  border-top-left-radius: 200px;
+  box-shadow: 7px 0 0 0 rgba(255, 255, 255, 0.8) inset;
+}
+body .content .description p {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  margin: 0 50px;
+  margin-top: 20px;
+  text-align: justify;
+  transform: translateY(-70px);
+}
+body .content .description .to_right {
+  float: right;
+  margin-right: 100px;
+  margin-bottom: 30px;
+}
+body .content .description .to_right h2 {
+  font-weight: 700;
+}
+body .content .description .to_right h2::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 1px;
+  background: #fff;
+  margin-top: 10px;
+  transform: translate(-13px, -10px);
+}
+body .content .description .to_right ul li {
+  list-style: none;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  font-style: italic;
+}
+body .content .submission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 130px;
+  width: 70%;
+  height: 100vh;
+}
+body .content .submission .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+body .content .submission .left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+}
+body .content .submission .left h2 {
+  font-weight: 600;
+}
+body .content .submission .left h2::after {
+  content: "";
+  display: block;
+  width: 55%;
+  height: 1px;
+  background: #fff;
+  margin-top: 10px;
+  transform: translate(-5px, -10px);
+}
+body .content .submission .left h3 {
+  font-weight: 600;
+  font-size: 23px;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+}
+body .content .submission .left h3 .date {
+  color: red;
+}
+body .content .submission .left p {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  text-align: justify;
+}
+body .content .submission .right {
+  width: 80%;
+}
+body .content .submission .right h2 {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Crimson Text", serif;
+}
+body .content .submission .right h3 {
+  font-weight: 600;
+  font-size: 23px;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+}
+body .content .submission .right h3 .date {
+  color: red;
+}
+body .content .submission .right p {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  margin-bottom: 0;
+}
+body .content .submission .right a {
+  color: red;
+}
+body .content .submission .right .details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 10px;
+}
+body .content .submission .right .details .leftie {
+  width: 90%;
+}
+body .content .submission .right .details .leftie p {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Crimson Text", serif;
+  margin-bottom: 0;
+}
+body .content .submission .right .details .rightie {
+  width: 90%;
+}
+body .content .submission .right .details .rightie p {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Crimson Text", serif;
+  margin-bottom: 0;
+}
+body .content .submission .right ul {
+  margin-left: 40px;
+  font-size: 20px;
+  font-style: italic;
+  color: #fff;
+}
+body .content .submission .right ul li {
+  font-family: "Crimson Text", serif;
+}
+body .content .submission .right ul ul {
+  margin-left: 60px;
+  font-size: 20px;
+  font-style: italic;
+  color: #fff;
+}
+body .content .submission .right ul ul li {
+  font-family: "Crimson Text", serif;
+  text-align: justify;
+  list-style: square;
+}
+body .content .speakers {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .content .speakers h1 {
+  border: solid 2px #fff;
+  padding: 10px 20px;
+  font-size: 60px;
+  font-weight: 600;
+  border-radius: 50px;
+}
+body .content .program {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .content .program h1 {
+  border: solid 2px #fff;
+  padding: 10px 20px;
+  font-size: 60px;
+  font-weight: 600;
+  border-radius: 50px;
+}
+body .content .registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .content .registration h1 {
+  font-size: 30px;
+  color: #D6C48F;
+  font-weight: 500;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 20px;
+}
+body .content .registration table {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  color: #fff;
+  border: 1px solid #D6C48F;
+  margin-bottom: 20px;
+}
+body .content .registration th, body .content .registration td {
+  color: #fff;
+  padding: 10px 20px;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  font-size: 20px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+body .content .registration td:nth-child(even) {
+  background-color: #D6C48F;
+  color: #000;
+}
+body .content .registration p {
+  font-size: 20px;
+  color: #D6C48F;
+  font-weight: 500;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 20px;
+}
+body .content .registration div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 60%;
+}
+body .content .registration div .leftie {
+  width: 160%;
+}
+body .content .registration div .leftie p {
+  font-size: 22px;
+  width: 100%;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  margin-bottom: 0;
+}
+body .content .registration div .rightie {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .content .registration div .rightie img {
+  width: 80%;
+}
+body .content .registration div .rightie p {
+  font-size: 21px;
+  font-weight: 800;
+  font-style: normal;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+}/*# sourceMappingURL=style.css.map */

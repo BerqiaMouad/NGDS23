@@ -647,18 +647,159 @@ body{
         // program =====================================
         .program{
             width: 70%;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-bottom: 10vh;
 
-            h1{
-                border: solid 2px #fff;
-                padding: 10px 20px;
-                font-size: 60px;
-                font-weight: 600;
-                border-radius: 50px;
+            .first{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                background-color: #052641;
+
+                .left, .right{
+                    border: 1px solid #000;
+                    width: 50%;
+                    height: 100%;
+                    padding: 2vh 0;
+                    text-align: center;
+                    line-height: 2;
+                    font-size: 23px;
+                    
+                    p{
+                        font-family: 'Crimson Text', serif;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .date{
+                background-color: #07355a;
+                font-size: 55px;
+                padding: 2vh 0;
+                color: #fff;
+                text-align: center;
+            }
+
+            .details{
+                background-color: white;
+                width: 100%;
+                margin-top: 2vh;
+
+                .container_session{
+                    padding-left: 2vw;
+                    margin-bottom: 8vh;
+
+                    .time{
+                        margin-top: 1vh;
+                        height: 100%;
+                        display: flex;
+                        font-size: 30px;
+                        font-weight: 700;
+                    }
+
+                    .chair{
+                        margin-top: 1vh;
+                        height: 100%;
+                        display: flex;
+                        font-size: 30px;
+                        font-weight: 700;
+                    }
+
+                    .desc{
+                        width: 95%;
+                        background-color: #aabed7;
+                        margin-top: 1vh;
+                        padding: 1vh 0.3vw;
+
+                        p{
+                            font-size: 30px;
+                            line-height: 2;
+                            font-weight: 500;
+                            color: #000;
+                        }
+
+                        span.talk_title p{
+                            font-size: 30px;
+                            font-weight: 700;
+                            margin: 4vh 0;
+                            text-align: center;
+                            line-height: 1.5;
+                        }
+
+                    }
+
+                    .workshop{
+                        width: 95%;
+                        background-color: #aabed7;
+                        margin-top: 1vh;
+                        padding: 1vh 0.3vw;
+                        background-color: greenyellow;
+
+                        p{
+                            font-size: 30px;
+                            line-height: 2;
+                            font-weight: 500;
+                            color: #000;
+                        }
+                    }
+
+                    .dinner{
+                        width: 95%;
+                        background-color: #aabed7;
+                        margin-top: 1vh;
+                        padding: 1vh 0.3vw;
+                        background-color: orange;
+
+                        p{
+                            font-size: 30px;
+                            line-height: 2;
+                            font-weight: 500;
+                            color: #000;
+                        }
+                    }
+
+                    .desc_2{
+                        width: 95%;
+                        background-color: #dbdbdb;
+                        margin: 3vh 0;
+
+                        p{
+                            font-size: 30px;
+                            line-height: 1.8;
+                            font-weight: 500;
+                            color: #000;
+
+                            span{
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+
+                h2{
+                    padding-left: 2vw;
+                    margin-bottom: 8vh;
+                    font-size: 30px;
+                    line-height: 2;
+                    font-size: 40px;
+                    font-weight: 500;
+                    color: #000;
+                    text-align: center;
+                }
+
+                .date{
+                    background-color: #07355a;
+                    font-size: 55px;
+                    padding: 2vh 0;
+                    width: 50%;
+                    text-align: center;
+                    margin: 0 auto;
+                    color: #fff;
+                }
             }
 
             @media (max-width: 500px){

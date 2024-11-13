@@ -906,12 +906,27 @@ body .content .committees .to_right h4 {
 body .content .center {
   margin: 30px 0;
 }
+@media (max-width: 768) {
+  body .content .center {
+    margin: 0 0;
+  }
+}
 body .content .center .wrapComitee {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
   padding: 0 5vw;
+}
+@media (max-width: 768px) {
+  body .content .center .wrapComitee {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  body .content .center .wrapComitee .pars {
+    margin-top: 40px;
+  }
 }
 body .content .center .wrapComitee .pars h2 {
   font-size: 25px;
@@ -947,6 +962,11 @@ body .content .center .wrapComitee .organizingComitee {
   flex: 1;
   height: 50vh;
 }
+@media (max-width: 768px) {
+  body .content .center .wrapComitee .organizingComitee {
+    height: 30vh;
+  }
+}
 body .content .center .wrapComitee .organizingComitee p {
   margin-top: 200px;
   padding: 20px;
@@ -955,6 +975,11 @@ body .content .center .wrapComitee .organizingComitee p {
   font-weight: 500;
   font-style: italic;
   font-family: "Crimson Text", serif;
+}
+@media (max-width: 768px) {
+  body .content .center .wrapComitee .organizingComitee p {
+    margin-top: 30px;
+  }
 }
 body .content .venue {
   display: flex;

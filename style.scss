@@ -1014,6 +1014,9 @@ body{
         }
         .center{
             margin: 30px 0;
+            @media (max-width: 768) {
+                margin: 0 0;
+            }
 
             .wrapComitee{
                 display: flex;
@@ -1022,7 +1025,14 @@ body{
                 gap: 20px;
                 padding: 0 5vw;
 
+                @media (max-width: 768px) {
+                    display: block;
+                }
+
                 .pars{
+                    @media (max-width: 768px) {
+                        margin-top: 40px;
+                    }
                     h2{
                         font-size: 25px;
                         font-weight: 800;
@@ -1056,6 +1066,9 @@ body{
                 .organizingComitee{
                     flex: 1;
                     height: 50vh;
+                    @media (max-width: 768px) {
+                        height: 30vh;
+                    }
                     p{
                         margin-top: 200px;
                         padding: 20px;
@@ -1064,6 +1077,9 @@ body{
                         font-weight: 500;
                         font-style: italic;
                         font-family: "Crimson Text", serif;
+                        @media (max-width: 768px) {
+                            margin-top: 30px;
+                        }
                     }
                 }
             }

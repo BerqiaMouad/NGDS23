@@ -1014,35 +1014,60 @@ body{
         }
         .center{
             margin: 30px 0;
-            h2{
-                font-size: 25px;
-                font-weight: 800;
-                font-family: 'Montserrat', sans-serif;
-                color: red;
-                margin-bottom: 0;
-                text-align: center;
 
-                @media (max-width: 768px){
-                    font-size: 20px;
+            .wrapComitee{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 0 5vw;
+
+                .pars{
+                    h2{
+                        font-size: 25px;
+                        font-weight: 800;
+                        font-family: 'Montserrat', sans-serif;
+                        color: red;
+                        margin-bottom: 5px;
+                        text-align: center;
+
+                        @media (max-width: 768px){
+                            font-size: 20px;
+                        }
+                    }
+                    .paragraphs{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+
+                        @media (max-width: 768px){
+                            grid-template-columns: 1fr;
+                            margin: 0 15vw;
+                        }
+
+                        p{
+                            font-family: "Crimson Text", serif;
+                            font-style: italic;
+                            text-align: justify;
+                            font-size: 22px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .organizingComitee{
+                    flex: 1;
+                    height: 50vh;
+                    p{
+                        margin-top: 200px;
+                        padding: 20px;
+                        background-color: red;
+                        font-size: 26px;
+                        font-weight: 500;
+                        font-style: italic;
+                        font-family: "Crimson Text", serif;
+                    }
                 }
             }
-            .pars{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
 
-                @media (max-width: 768px){
-                    grid-template-columns: 1fr;
-                    margin: 0 15vw;
-                }
-
-                p{
-                    font-family: "Crimson Text", serif;
-                    font-style: italic;
-                    text-align: justify;
-                    font-size: 22px;
-                    font-weight: 500;
-                }
-            }
         }
 
         // venue =====================================

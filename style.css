@@ -906,35 +906,55 @@ body .content .committees .to_right h4 {
 body .content .center {
   margin: 30px 0;
 }
-body .content .center h2 {
+body .content .center .wrapComitee {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 5vw;
+}
+body .content .center .wrapComitee .pars h2 {
   font-size: 25px;
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
   color: red;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   text-align: center;
 }
 @media (max-width: 768px) {
-  body .content .center h2 {
+  body .content .center .wrapComitee .pars h2 {
     font-size: 20px;
   }
 }
-body .content .center .pars {
+body .content .center .wrapComitee .pars .paragraphs {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 @media (max-width: 768px) {
-  body .content .center .pars {
+  body .content .center .wrapComitee .pars .paragraphs {
     grid-template-columns: 1fr;
     margin: 0 15vw;
   }
 }
-body .content .center .pars p {
+body .content .center .wrapComitee .pars .paragraphs p {
   font-family: "Crimson Text", serif;
   font-style: italic;
   text-align: justify;
   font-size: 22px;
   font-weight: 500;
+}
+body .content .center .wrapComitee .organizingComitee {
+  flex: 1;
+  height: 50vh;
+}
+body .content .center .wrapComitee .organizingComitee p {
+  margin-top: 200px;
+  padding: 20px;
+  background-color: red;
+  font-size: 26px;
+  font-weight: 500;
+  font-style: italic;
+  font-family: "Crimson Text", serif;
 }
 body .content .venue {
   display: flex;
